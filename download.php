@@ -95,7 +95,7 @@ function SendEmail($client,$filename){
         $mail->isHTML();
         $mail->Username = $username;
         $mail->Password = $password;
-        $mail->SetFrom($username,'Sari Postcodezip');
+        $mail->SetFrom($username,'demo');
         $mail->Subject = "Somebody downloaded your file: ".$filename;
         $mail->Body = 'The user who download was '.$client;
         $mail->AddAddress($username);
