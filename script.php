@@ -1,8 +1,8 @@
 <?php
 require_once ('PHPMailer/PHPMailerAutoload.php');
 
-$username = "sa.postcodezip@gmail.com";
-$password = "ff1fvd1vdDcv2d3d";
+$username = "";
+$password = "";
 $hostname = '{imap.gmail.com:993/imap/ssl}INBOX';
 $inbox = imap_open($hostname, $username, $password) or die('Cannot connect to Gmail: ' . imap_last_error());
 $emails = imap_search($inbox, 'UNSEEN');
@@ -55,12 +55,12 @@ function ParseEmail($message, $email)
 {
 
     $products = array(
-        "https://www.postalcodezip.com/en/postal-united-kingdom",
-        "https://www.postalcodezip.com/en/postal-cocos-keeling-islands",
-        "https://www.postalcodezip.com/en/city-sint-maarten",
-        "https://www.postalcodezip.com/en/caribbean-netherlands",
-        "https://www.listreet.com/en/germany",
-        "https://www.postcodezip.com/malaysia"
+        "https://www.{demo}.com/en/postal-united-kingdom",
+        "https://www.{demo}.com/en/postal-cocos-keeling-islands",
+        "https://www.{demo}.com/en/city-sint-maarten",
+        "https://www.{demo}.com/en/caribbean-netherlands",
+        "https://www.{demo}.com/en/germany",
+        "https://www.{demo}.com/malaysia"
     );
     $parsed_products = array();
 
@@ -134,7 +134,7 @@ function sendURLtoSender($username, $password, $sender, $parsed_products_array)
         $mail->isHTML();
         $mail->Username = $username;
         $mail->Password = $password;
-        $mail->SetFrom($username, 'Sari Postcodezip');
+        $mail->SetFrom($username, 'Name');
         $mail->Subject = "Download Your Content";
         $mail->Body = $message;
         $mail->AddAddress($sender);
