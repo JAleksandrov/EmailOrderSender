@@ -84,8 +84,8 @@ readfile($filename);
 
 function SendEmail($client,$filename){
     $mail = new PHPMailer(true);
-    $username = "sa.postcodezip@gmail.com";
-    $password = "ff1fvd1vdDcv2d3d";
+    $username = "";
+    $password = "";
     try {  
         $mail->isSMTP();
         $mail->SMTPAuth = true;
