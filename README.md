@@ -1,5 +1,5 @@
 # EmailOrderSender
-This script receives emails from specified email in this case it will be on the Gmail server, each email which will contain a product it will send out the correct download URL to the customer.
+This script receives emails from specified email in this case it will be on the Gmail server, each email which will contain a product it will send out the correct download URL to the customer. It also informs you when somebody downloads the file from you.
 
 
 Server used: AWS Ubuntu.
